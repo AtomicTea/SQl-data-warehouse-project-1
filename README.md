@@ -1,5 +1,5 @@
 # SQL-data-warehouse-project-1
-My goal for this project was to build a modern data warehouse (> ⚠️ FIX: with SQL Server), including ETL processes, data modeling, and analytics.
+My goal for this project was to build a modern data warehouse with MySQL, including ETL processes, data modeling, and analytics.
 ## About This Project
 
 This project demonstrates the design and implementation of an end-to-end data warehouse, transforming raw CRM and ERP source data into a structured, analytics-ready data model.
@@ -20,7 +20,6 @@ The project covers the full data warehouse development lifecycle, including:
 * Raw data ingestion into the Bronze layer
 * Data cleansing, standardization, and integration in the Silver layer
 * SQL-based transformation and loading processes
-* Stored procedures for data loading
 * Dimensional modeling and business object analysis
 * Customer and product dimensions
 * Sales fact table
