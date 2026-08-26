@@ -1,5 +1,5 @@
 # SQL-data-warehouse-project-1
-My goal for this project was to build a modern data warehouse (with SQL Server), including ETL processes, data modeling, and analytics.
+My goal for this project was to build a modern data warehouse (> ⚠️ FIX: with SQL Server), including ETL processes, data modeling, and analytics.
 ## About This Project
 
 This project demonstrates the design and implementation of an end-to-end data warehouse, transforming raw CRM and ERP source data into a structured, analytics-ready data model.
