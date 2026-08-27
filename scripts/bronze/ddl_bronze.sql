@@ -2,9 +2,14 @@
 ==================================================
 DDL Script: Create Bronze Tables
 ==================================================
-This script creates tables in the Bronze schema. Run this script to define the DDL structure of Bronze tables.
-
+This script creates tables in the Bronze schema. 
 */
+
+/* Run this script to erase the previous version of the table before re-defining. */
+DROP TABLE IF EXISTS dwport1_bronze.crm_sales_details;
+
+/*
+Run this script to define the DDL structure of Bronze tables.*/
 
 CREATE TABLE dwport1_bronze.crm_sales_details (
 sls_ord_num VARCHAR(50),
@@ -19,6 +24,12 @@ sls_price INT
 )
 
 
+/* Run this script to erase the previous version of the table before re-defining. */
+DROP TABLE IF EXISTS dwport1_bronze.crm_cust_info;
+
+/*
+Run this script to define the DDL structure of Bronze tables.*/  
+
 CREATE TABLE  dwport1_bronze.crm_cust_info(
 cst_id INT,
 cst_key VARCHAR(50),
@@ -29,6 +40,12 @@ cst_gndr VARCHAR(50),
 cst_create_date date
 )
 
+
+/* Run this script to erase the previous version of the table before re-defining. */
+DROP TABLE IF EXISTS dwport1_bronze.crm_prd_info;
+
+/*
+Run this script to define the DDL structure of Bronze tables.*/  
   
 CREATE TABLE dwport1_bronze.crm_prd_info (
 prd_id INT,
@@ -40,6 +57,12 @@ prd_start_dt DATETIME,
 prd_end_dt DATETIME
 )
 
+
+/* Run this script to erase the previous version of the table before re-defining. */
+DROP TABLE IF EXISTS dwport1_bronze.erp_cust_az12;
+
+/*
+Run this script to define the DDL structure of Bronze tables.*/    
   
 CREATE TABLE dwport1_bronze.erp_cust_az12 (
 cid VARCHAR(50),
@@ -48,11 +71,23 @@ gen VARCHAR(50)
 )
 
 
+/* Run this script to erase the previous version of the table before re-defining. */
+DROP TABLE IF EXISTS dwport1_bronze.erp_loc_a101;
+
+/*
+Run this script to define the DDL structure of Bronze tables.*/    
+
 CREATE TABLE dwport1_bronze.erp_loc_a101 (
 cid VARCHAR(50),
 cntry VARCHAR(50)
 )
 
+
+/* Run this script to erase the previous version of the table before re-defining. */
+DROP TABLE IF EXISTS dwport1_bronze.erp_px_cat_g1v2;
+
+/*
+Run this script to define the DDL structure of Bronze tables.*/  
   
 CREATE TABLE dwport1_bronze.erp_px_cat_g1v2 (
 id VARCHAR(50),
