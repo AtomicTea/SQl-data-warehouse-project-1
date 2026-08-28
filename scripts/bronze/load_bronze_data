@@ -1,0 +1,70 @@
+/*
+===============================================================================
+Stored Procedure: Load Bronze Layer (Source -> Bronze)
+===============================================================================
+Script Purpose:
+    This stored procedure loads data into the 'bronze' schema from external CSV files. 
+    It performs the following actions:
+     * Truncates the bronze tables before loading data. Perform the TRUNCATE TABLE separately from the 
+     * Uses the 'LOAD DATA LOCAL INFILE' command to load data from the csv files to bronze tables.
+     * Works within the limitations of MySQL
+
+Parameters:
+    None. 
+	  This stored procedure does not accept any parameters or return any values.
+===============================================================================
+
+*/
+
+TRUNCATE TABLE dwport1_bronze.crm_cust_info;
+
+LOAD DATA LOCAL INFILE '<PROJECT_PATH>/datasets/source_crm/cust_info.csv'
+INTO TABLE dwport1_bronze.crm_cust_info
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\r\n'
+IGNORE 1 ROWS;
+
+
+TRUNCATE TABLE dwport1_bronze.crm_sales_details;
+
+LOAD DATA LOCAL INFILE '<PROJECT PATH>/datasets/source_crm/sales_details.csv'
+INTO TABLE dwport1_bronze.crm_sales_details
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\r\n'
+IGNORE 1 ROWS;
+
+
+TRUNCATE TABLE dwport1_bronze.crm_prd_info;
+
+LOAD DATA LOCAL INFILE '<PROJECT PATH>/datasets/source_crm/prd_info.csv'
+INTO TABLE dwport1_bronze.crm_prd_info
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\r\n'
+IGNORE 1 ROWS;
+
+
+TRUNCATE TABLE dwport1_bronze.erp_cust_az12;
+
+LOAD DATA LOCAL INFILE '<PROJECT PATH>/datasets/source_erp/cust_az12.csv'
+INTO TABLE dwport1_bronze.erp_cust_az12
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\r\n'
+IGNORE 1 ROWS;
+
+
+TRUNCATE TABLE dwport1_bronze.erp_loc_a101;
+
+LOAD DATA LOCAL INFILE '<PROJECT PATH>/datasets/source_erp/loc_a101.csv'
+INTO TABLE dwport1_bronze.erp_loc_a101
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\r\n'
+IGNORE 1 ROWS;
+
+
+TRUNCATE TABLE dwport1_bronze.erp_px_cat_g1v2;
+
+LOAD DATA LOCAL INFILE '<PROJECT PATH>/datasets/source_erp/px_cat_g1v2'
+INTO TABLE dwport1_bronze.erp_px_cat_g1v2
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\r\n'
+IGNORE 1 ROWS;
