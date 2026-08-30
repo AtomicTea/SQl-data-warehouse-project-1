@@ -57,3 +57,15 @@ Hi! I'm Tracy. I bring a strong background in science, technology, digital media
 This repository is part of my data portfolio and demonstrates my work in data warehousing, transformation, modeling, documentation, and analytics.
 
 **Connect with me:** [LinkedIn](https://www.linkedin.com/in/tracy-mason-3602337/) <!-- ⚙ Portfolio--> ⚙ [Notion templates](https://payhip.com/AtomicTeaWorks) ⚙ CV
+
+<!--
+Maybe add something like this? Of course, put in actual steps.
+###How to Install and Run the Project
+* Save the files locally or clone the repository.
+* Open a terminal or a SQL GUI, such as MySQL Workbench.
+
+* Execute the files in the following order:
+  * installation.sql
+  * mock_data.sql
+* Open analysis.sql and select a query to run.
+--!>
