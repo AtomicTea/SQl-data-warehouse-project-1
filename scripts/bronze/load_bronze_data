@@ -5,13 +5,17 @@ Stored Procedure: Load Bronze Layer (Source -> Bronze)
 Script Purpose:
     This stored procedure loads data into the 'bronze' schema from external CSV files. 
     It performs the following actions:
-     * Truncates the bronze tables before loading data. Perform the TRUNCATE TABLE separately from the 
+     * Truncates the bronze tables before loading data. 
      * Uses the 'LOAD DATA LOCAL INFILE' command to load data from the csv files to bronze tables.
-     * Works within the limitations of MySQL
 
 Parameters:
     None. 
 	  This stored procedure does not accept any parameters or return any values.
+
+Exceptions:
+     * If you are working within MySQL Workbench, truncating and loading data cannot be completed in 
+       batch. Each TRUNCATE and each LOAD DATA LOCAL INFILE must be 
+       performed separately to be within the parameters of MySQL Workbench.
 ===============================================================================
 
 */
