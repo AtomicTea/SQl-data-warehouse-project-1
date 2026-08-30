@@ -1,5 +1,5 @@
 # SQL-data-warehouse-project-1
-My goal for this project was to build a modern data warehouse with MySQL, including ETL processes, data modeling, and analytics.
+My goal for this project was to build a modern data warehouse with MySQL, including ETL processes, data modeling, and analytics. I completed the project both with and without the use of MySQL Workbench
 ## About This Project
 
 This project demonstrates the design and implementation of an end-to-end data warehouse, transforming raw CRM and ERP source data into a structured, analytics-ready data model.
@@ -52,7 +52,7 @@ The repository documents the architecture, transformation logic, data flows, and
 
 ### About the Author
 
-Hi! I'm Tracy. I bring a background in science, technology, digital media, and communications to my work with data. I bring a strong focus on clear communication and problem-solving to data work, with particular interests in analytics engineering, data modeling, and building reliable data solutions that make data easier to understand and use.
+Hi! I'm Tracy. I bring a strong background in science, technology, digital media, and communications to my work with data. I like to focus on clear communication and problem-solving in my data work, with particular interests in analytics engineering and data modeling, especially building reliable data solutions that make data easier to understand and use.
 
 This repository is part of my data portfolio and demonstrates my work in data warehousing, transformation, modeling, documentation, and analytics.
 
