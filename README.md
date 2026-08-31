@@ -1,5 +1,6 @@
 # SQL-data-warehouse-project-1
-My goal for this project was to build a modern data warehouse with MySQL, including ETL processes, data modeling, and analytics. 
+My goal for this project was to build a modern data warehouse using MySQL Workbench, including ETL processes, data modeling, and analytics. 
+
 ## About This Project
 
 This project demonstrates the design and implementation of an end-to-end data warehouse, transforming raw CRM and ERP source data into a structured, analytics-ready data model.
@@ -49,6 +50,10 @@ The Gold layer uses a star schema consisting of customer and product dimensions 
 ✦ **Data Documentation** — architecture diagrams, data flows, and data cataloging
 
 The repository documents the architecture, transformation logic, data flows, and development process used to build the warehouse from source data through the final analytical model.
+
+### Future Updates
+
+I would like to explore an alternative approach for automating the Bronze-layer ingestion through stored procedures or an external orchestration process. MySQL does not permit LOAD DATA INFILE to be executed within stored procedures, so the current implementation uses a standalone load_bronze.sql script for bulk CSV ingestion.
 
 ### About the Author
 
