@@ -12,10 +12,6 @@ Parameters:
     None. 
 	  This procedure does not accept any parameters or return any values.
 
-Exceptions:
-     * If you are working within MySQL Workbench, truncating and loading data cannot be completed in 
-       batch. Each TRUNCATE and each LOAD DATA LOCAL INFILE must be 
-       performed separately to work within the parameters of MySQL Workbench.
 ===============================================================================
 
 */
