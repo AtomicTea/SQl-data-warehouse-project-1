@@ -3,7 +3,7 @@
 Load Silver Layer (Bronze -> Silver)
 ===============================================================================
 Script Purpose:
-    This procedure loads data into the 'Silver' schema from the Bronze layer. 
+    This procedure performs the ETL (Extract, Transform, Load) process to populate the 'Silver' schema from the Bronze layer. 
     It performs the following actions:
      * Truncates the Silver tables before loading new data. 
      * Extracts data from the Bronze tables.
@@ -12,6 +12,9 @@ Script Purpose:
      * Handles SQL exceptions by stopping execution and returning the
        original error to the caller.
 
+Parameters:
+    None. 
+	  This procedure does not accept any input parameters or return any values.
 ===============================================================================
 
 How to run: 
