@@ -3,10 +3,13 @@
 Load Bronze Layer (Source -> Bronze)
 ===============================================================================
 Script Purpose:
-    This procedure loads data into the 'bronze' schema from external CSV files. 
+    This procedure loads raw datafrom source CSV files into the
+'Bronze' schema. 
     It performs the following actions:
-     * Truncates the bronze tables before loading data. 
-     * Uses the 'LOAD DATA LOCAL INFILE' command to load data from the csv files to bronze tables.
+	* Truncates the Bronze tables before loading new data. 
+	* Uses the 'LOAD DATA LOCAL INFILE' command to load data from the source CSV files into the 
+       corresponding Bronze tables.
+	* Preserves the source data in its raw form for downstream processing in the Silver layer.
 
 Parameters:
     None. 
