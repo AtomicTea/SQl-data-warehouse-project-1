@@ -57,7 +57,7 @@ pn.prd_line AS product_line,
 pn.prd_start_dt AS start_date
 FROM dwport1_silver.crm_prd_info AS pn
 LEFT JOIN dwport1_silver.erp_px_cat_g1v2 AS pc ON pn.cat_id = pc.id
-WHERE prd_end_dt IS NULL -- Filters out historical data. If end date is Null, it is currently a product.
+WHERE prd_end_dt IS NULL; -- Filters out historical data. If end date is Null, it is currently a product.
 
 
 
