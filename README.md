@@ -30,6 +30,8 @@ The project covers the full data warehouse development lifecycle, including:
 * Git-based version control and development workflow
 
 ### Architecture
+<img width="1041" height="778" alt="data_architecture" src="https://github.com/user-attachments/assets/13357f83-ce26-4c8e-b3ed-9b7e91f68951" />
+
 
 **Bronze → Silver → Gold**
 
@@ -46,6 +48,7 @@ The Gold layer uses a star schema consisting of customer and product dimensions 
 ✦ **SQL** — DDL, DML, data transformation, analytical queries, and stored procedures\
 ✦ **Relational Database** — database and schema design\
 ✦ **Git/GitHub** — version control and source code management\
+✦ **ETL Pipelines** - Extracting, transforming, and loading data from source systems into the warehouse.
 ✦ **Data Modeling** — dimensional modeling, fact and dimension design, and star schemas\
 ✦ **Data Documentation** — architecture diagrams, data flows, and data cataloging
 
