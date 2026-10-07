@@ -60,7 +60,7 @@ The Bronze layer uses LOAD DATA LOCAL INFILE to bulk-load source CSV files. Duri
 
 ### Future Updates
 
-would like to explore a more automated approach to Bronze-layer ingestion, potentially using an external orchestration tool or automated data pipeline to manage the loading of source CSV files.
+I would like to explore a more automated approach to Bronze-layer ingestion, potentially using an external orchestration tool or automated data pipeline to manage the loading of source CSV files.
 
 The current implementation uses a standalone load_bronze_data.sql script for bulk CSV ingestion. Future development could replace this manual step with a repeatable, scheduled ingestion process.
 
