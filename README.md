@@ -54,9 +54,15 @@ The Gold layer uses a star schema consisting of customer and product dimensions 
 
 The repository documents the architecture, transformation logic, data flows, and development process used to build the warehouse from source data through the final analytical model.
 
+### Technical Note
+
+The Bronze layer uses LOAD DATA LOCAL INFILE to bulk-load source CSV files. During development, I found that this approach could not be incorporated into the stored procedure workflow in my MySQL environment. I therefore separated the bulk file-ingestion step into a standalone load_bronze_data.sql script while keeping the Bronze loading process repeatable and documented.
+
 ### Future Updates
 
-I would like to explore an alternative approach for automating the Bronze-layer ingestion through stored procedures or an external orchestration process. MySQL does not permit LOAD DATA INFILE to be executed within stored procedures, so the current implementation uses a standalone load_bronze_data.sql script for bulk CSV ingestion.
+would like to explore a more automated approach to Bronze-layer ingestion, potentially using an external orchestration tool or automated data pipeline to manage the loading of source CSV files.
+
+The current implementation uses a standalone load_bronze_data.sql script for bulk CSV ingestion. Future development could replace this manual step with a repeatable, scheduled ingestion process.
 
 ### About the Author
 
