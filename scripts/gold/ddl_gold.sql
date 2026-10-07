@@ -60,28 +60,6 @@ LEFT JOIN dwport1_silver.erp_px_cat_g1v2 AS pc ON pn.cat_id = pc.id
 WHERE prd_end_dt IS NULL -- Filters out historical data. If end date is Null, it is currently a product.
 
 
-/* CHECK to make sure the Join did not make any duplicates
-
-SELECT prd_key, COUNT(*) FROM(
-SELECT
-pn.prd_id,
-pn.cat_id,
-pn.prd_key,
-pn.prd_nm,
-pn.prd_cost,
-pn.prd_line,
-pn.prd_start_dt,
-pc.cat,
-pc.subcat,
-pc.maintenance
-FROM dwport1_silver.crm_prd_info AS pn
-LEFT JOIN dwport1_silver.erp_px_cat_g1v2 AS pc ON pn.cat_id = pc.id
-WHERE prd_end_dt IS NULL -- Filters out historical data. If end date is Null, it is currently a product.
-)  AS t
-GROUP BY prd_key
-HAVING COUNT(*) >1 */
-
-
 
   
 -- DROP EXISTING VIEW
@@ -110,50 +88,3 @@ LEFT JOIN dwport1_silver.erp_loc_a101 AS la ON ci.cst_key = la.cid
  
 
 
-/* ****************************************************************CHECKS ******************************************** */
-
-/* ********************** Data Integration checks **************************
-For business rules: In this case, the master source of customer data is CRM. 
-CRM is the master unless CRM's value is Unknown or n/a. If CRM doesn't have a usable value, use ERP. 
-If ERP doesn't have a value either, use n/a.*/
-/* SELECT DISTINCT
-ci.cst_gndr,
-ca.gen,
-	CASE WHEN ci.cst_gndr NOT IN ('n/a','Unknown') THEN ci.cst_gndr -- CRM is the master for gender info
-		 ELSE COALESCE(ca.gen, 'n/a')
-	END AS new_gen
-FROM dwport1_silver.crm_cust_info AS ci
-LEFT JOIN dwport1_silver.erp_cust_az12 AS ca ON ci.cst_key = ca.cid
-LEFT JOIN dwport1_silver.erp_loc_a101 AS la ON ci.cst_key = la.cid
-ORDER BY ci.cst_gndr, ca.gen;
-*/
-
-/* Check for duplicates after joins. Expect none. */
-/*
-SELECT cst_id, COUNT(*) FROM (
-SELECT
-	ci.cst_id,
-	ci.cst_key,
-	ci.cst_firstname,
-	ci.cst_lastname,
-	ci.cst_marital_status,
-	ci.cst_gndr,
-	ci.cst_create_date,
-    ca.bdate,
-    ca.gen,
-    la.cntry
-FROM dwport1_silver.crm_cust_info AS ci
-LEFT JOIN dwport1_silver.erp_cust_az12 AS ca ON ci.cst_key = ca.cid
-LEFT JOIN dwport1_silver.erp_loc_a101 AS la ON ci.cst_key = la.cid)
-AS t
-GROUP BY cst_id
-HAVING COUNT(*) >1
-*/
-/* Check if all dimension tables can successfully join to the fact table. Expect 0 results.
-SELECT *
-FROM dwport1_gold.fact_sales AS f
-LEFT JOIN dwport1_gold.dim_customers AS c ON c.customer_key = f.customer_key
--- WHERE c.customer_key IS NULL
-LEFT JOIN dwport1_gold.dim_products AS p ON p.product_key = f.product_key
-WHERE p.product_key IS NULL
-*/
