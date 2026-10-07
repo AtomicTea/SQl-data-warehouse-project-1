@@ -48,7 +48,7 @@ The Gold layer uses a star schema consisting of customer and product dimensions 
 ✦ **SQL** — DDL, DML, data transformation, analytical queries, and stored procedures\
 ✦ **Relational Database** — database and schema design\
 ✦ **Git/GitHub** — version control and source code management\
-✦ **ETL Pipelines** - Extracting, transforming, and loading data from source systems into the warehouse.
+✦ **ETL Pipelines** - Extracting, transforming, and loading data from source systems into the warehouse.\
 ✦ **Data Modeling** — dimensional modeling, fact and dimension design, and star schemas\
 ✦ **Data Documentation** — architecture diagrams, data flows, and data cataloging
 
