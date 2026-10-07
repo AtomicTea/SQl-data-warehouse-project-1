@@ -56,7 +56,7 @@ The repository documents the architecture, transformation logic, data flows, and
 
 ### Future Updates
 
-I would like to explore an alternative approach for automating the Bronze-layer ingestion through stored procedures or an external orchestration process. MySQL does not permit LOAD DATA INFILE to be executed within stored procedures, so the current implementation uses a standalone load_bronze.sql script for bulk CSV ingestion.
+I would like to explore an alternative approach for automating the Bronze-layer ingestion through stored procedures or an external orchestration process. MySQL does not permit LOAD DATA INFILE to be executed within stored procedures, so the current implementation uses a standalone load_bronze_data.sql script for bulk CSV ingestion.
 
 ### About the Author
 
