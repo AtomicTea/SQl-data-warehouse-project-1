@@ -70,9 +70,10 @@ Hi! I'm Tracy. I bring a strong background in science, technology, digital media
 
 This repository is part of my data portfolio and demonstrates my work in data warehousing, transformation, modeling, documentation, and analytics.
 
-**Connect with me:** [LinkedIn](https://www.linkedin.com/in/tracy-mason-3602337/) <!-- ⚙ Portfolio--> ⚙ [Notion templates](https://payhip.com/AtomicTeaWorks) ⚙ CV
+**Connect with me:** [LinkedIn](https://www.linkedin.com/in/tracy-mason-3602337/) <!-- ⚙ Portfolio--> ⚙ [Notion templates](https://payhip.com/AtomicTeaWorks) ⚙ [CV/Portfolio](https://tracymasoncv.notion.site/)
 
 <!--
+
 Maybe add something like this? Of course, put in actual steps.
 ###How to Install and Run the Project
 * Save the files locally or clone the repository.
